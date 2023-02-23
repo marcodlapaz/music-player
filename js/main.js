@@ -33,7 +33,7 @@ const songs = [
   {
     name: "song4",
     displayName: "Different",
-    artist: "FEsther Garcia Gonzalez, iftySounds",
+    artist: "FEsther Garcia Gonzalez",
   },
 ];
 
@@ -84,13 +84,13 @@ function nextSong() {
   playSong();
 }
 
-// loadSong(songs[songIndex]);
+loadSong(songs[songIndex]);
 
 function updateProgressBar(e) {
   if (isPlaying) {
     const { duration, currentTime } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
-    progress.style.width = `${progressPercent}`;
+    progress.style.width = `${progressPercent}%`;
     const durationMinutes = Math.floor(duration / 60);
     let durationSeconds = Math.floor(duration % 60);
 
